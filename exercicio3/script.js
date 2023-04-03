@@ -9,5 +9,14 @@ const produtos = [
     { nome: "Vinho Tinto", categoria: "Bebidas", preco: 55 },
     { nome: "Berinjela kg", categoria: "Hortifruti", preco: 8.99 },
     { nome: "Sabão em Pó", categoria: "Limpeza", preco: 10.80 }
- ]
- 
+]
+// cria nova variavel (novoArray) pra receber a lista 
+// na lista produtos, procura 
+// produtos e o array primario, filtro um objeto, que tenha.categora= Limpeza
+const novoArray = produtos.filter((produto)=>{
+    return produto.categoria === 'Limpeza'
+}).map((produto)=>{
+    return produto.nome
+})
+
+console.log(novoArray)
